@@ -1,3 +1,15 @@
+import streamlit as st
+import base64
+
+st.set_page_config(
+    page_title="Feliz Cumpleaños Jesenia",
+    page_icon="🎂",
+    layout="wide"
+)
+
+# ==========================
+# ESTILOS
+# ==========================
 st.markdown("""
 <style>
 
