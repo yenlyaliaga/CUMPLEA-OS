@@ -1,5 +1,4 @@
 import streamlit as st
-import base64
 
 st.set_page_config(
     page_title="Feliz Cumpleaños Jesenia",
@@ -58,25 +57,7 @@ st.markdown("""
     font-weight:500;
 }
 
-.video-container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-top:30px;
-    margin-bottom:30px;
-}
-
-.video-frame{
-    width:100%;
-    max-width:500px;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0px 0px 40px rgba(255,255,255,0.9);
-}
-
-/* ==========================
-   GLOBOS
-========================== */
+/* GLOBOS */
 
 .balloon{
     position:fixed;
@@ -149,9 +130,7 @@ st.markdown("""
     }
 }
 
-/* Celulares */
-
-@media (max-width: 768px){
+@media (max-width:768px){
 
     .balloon{
         width:50px;
@@ -163,9 +142,6 @@ st.markdown("""
         top:65px;
     }
 
-    .mensaje{
-        padding:15px;
-    }
 }
 
 </style>
@@ -199,21 +175,8 @@ st.markdown("""
 # ==========================
 # VIDEO
 # ==========================
-# ==========================
-# VIDEO
-# ==========================
 
-import os
-
-st.write("Existe:", os.path.exists("jesenia.mp4"))
-
-if os.path.exists("jesenia.mp4"):
-    st.success("✅ Video encontrado")
-    st.video("jesenia.mp4")
-else:
-    st.error("❌ No se encontró el video")
-  
-  
+st.video("jesenia.mp4")
 
 # ==========================
 # MENSAJE
@@ -244,3 +207,11 @@ salud, amor y muchas bendiciones. 🎁🎉
 
 </div>
 """, unsafe_allow_html=True)
+
+st.markdown("<br><br>", unsafe_allow_html=True)
+
+if st.button("🎁 Mensaje Sorpresa"):
+    st.success(
+        "Jesenia, gracias por ser una hermana maravillosa. "
+        "Que Dios te bendiga siempre y que todos tus sueños se hagan realidad. ❤️🎂"
+    )
