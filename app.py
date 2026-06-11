@@ -165,21 +165,15 @@ with col2:
 st.markdown("""
 <div class="mensaje">
 
-🌷 Hoy es un día muy especial porque celebramos tu vida. 🌷
+🌷 Hoy es un día muy especial porque celebramos tu cumpleaños. 🌷
 
 <br><br>
 
-Gracias por ser una hermana increíble,
-por tu cariño, tu apoyo y todos los momentos compartidos. 💕
+Gracias por ser una hermana increíble,por tu cariño, tu apoyo y todos los momentos compartidos. 💕
 
-<br><br>
+Te deseo un año lleno de alegría y muchas bendiciones. 🎁🎉
 
-Te deseo un año lleno de alegría,
-salud, amor y muchas bendiciones. 🎁🎉
-
-<br><br>
-
-❤️ Que este nuevo año de vida esté lleno de momentos inolvidables. ❤️
+❤️ "Que Dios te bendiga siempre " ❤️
 
 <br><br>
 
@@ -192,6 +186,6 @@ st.markdown("<br>", unsafe_allow_html=True)
 
 if st.button("🎁 Mensaje Sorpresa"):
     st.success(
-        "Jesenia, gracias por ser una hermana maravillosa. "
-        "Que Dios te bendiga siempre y que todos tus sueños se hagan realidad. ❤️"
+        "jaja no hay, caiste"
+       
     )
