@@ -200,24 +200,14 @@ st.markdown("""
 
 🌷 Hoy es un día muy especial porque celebramos tu vida. 🌷
 
-<br><br>
 
-Que cada sonrisa que regales regrese multiplicada,
-que cada meta que te propongas se convierta en realidad
-y que nunca te falten motivos para ser feliz. ✨
 
 <br><br>
 
 Gracias por ser una hermana increíble,
 por tu cariño, tu apoyo y todos los momentos compartidos. 💕
 
-<br><br>
-
-Te deseo un año lleno de salud,
-amor, éxitos y muchas bendiciones. 🎁🎉
-
-<br><br>
-
+Te deseo un año lleno de salud,amor, éxitos y muchas bendiciones. 🎁🎉
 ❤️ Que este nuevo año de vida esté lleno de momentos inolvidables. ❤️
 
 <br><br>
