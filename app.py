@@ -199,33 +199,21 @@ st.markdown("""
 # ==========================
 # VIDEO
 # ==========================
+# ==========================
+# VIDEO
+# ==========================
 
-with open("jesenia.mp4", "rb") as f:
-    video_bytes = f.read()
+import os
 
-video_base64 = base64.b64encode(video_bytes).decode()
+st.write("Existe:", os.path.exists("jesenia.mp4"))
 
-st.markdown(f"""
-<div class="video-container">
-    <div class="video-frame">
-
-        <video
-            autoplay
-            muted
-            loop
-            controls
-            style="
-                width:100%;
-                height:auto;
-                display:block;
-            "
-        >
-            <source src="data:video/mp4;base64,{video_base64}" type="video/mp4">
-        </video>
-
-    </div>
-</div>
-""", unsafe_allow_html=True)
+if os.path.exists("jesenia.mp4"):
+    st.success("✅ Video encontrado")
+    st.video("jesenia.mp4")
+else:
+    st.error("❌ No se encontró el video")
+  
+  
 
 # ==========================
 # MENSAJE
