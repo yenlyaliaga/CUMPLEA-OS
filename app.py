@@ -57,6 +57,14 @@ st.markdown("""
     font-weight:500;
 }
 
+/* Reducir tamaño del video */
+[data-testid="stVideo"]{
+    max-width:500px;
+    margin:auto;
+    border-radius:20px;
+    overflow:hidden;
+}
+
 /* GLOBOS */
 
 .balloon{
@@ -79,47 +87,13 @@ st.markdown("""
     top:100px;
 }
 
-.b1{
-    left:5%;
-    background:#ff4d6d;
-    animation:float 12s linear infinite;
-}
-
-.b2{
-    left:20%;
-    background:#ffbe0b;
-    animation:float 15s linear infinite;
-}
-
-.b3{
-    left:35%;
-    background:#8338ec;
-    animation:float 18s linear infinite;
-}
-
-.b4{
-    left:50%;
-    background:#3a86ff;
-    animation:float 13s linear infinite;
-}
-
-.b5{
-    left:65%;
-    background:#06d6a0;
-    animation:float 16s linear infinite;
-}
-
-.b6{
-    left:80%;
-    background:#fb5607;
-    animation:float 14s linear infinite;
-}
-
-.b7{
-    left:92%;
-    background:#ff006e;
-    animation:float 17s linear infinite;
-}
+.b1{left:5%;background:#ff4d6d;animation:float 12s linear infinite;}
+.b2{left:20%;background:#ffbe0b;animation:float 15s linear infinite;}
+.b3{left:35%;background:#8338ec;animation:float 18s linear infinite;}
+.b4{left:50%;background:#3a86ff;animation:float 13s linear infinite;}
+.b5{left:65%;background:#06d6a0;animation:float 16s linear infinite;}
+.b6{left:80%;background:#fb5607;animation:float 14s linear infinite;}
+.b7{left:92%;background:#ff006e;animation:float 17s linear infinite;}
 
 @keyframes float{
     0%{
@@ -142,6 +116,9 @@ st.markdown("""
         top:65px;
     }
 
+    [data-testid="stVideo"]{
+        max-width:300px;
+    }
 }
 
 </style>
@@ -173,10 +150,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================
-# VIDEO
+# VIDEO CENTRADO
 # ==========================
 
-st.video("jesenia.mp4")
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.video("jesenia.mp4")
 
 # ==========================
 # MENSAJE
@@ -208,10 +188,10 @@ salud, amor y muchas bendiciones. 🎁🎉
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 if st.button("🎁 Mensaje Sorpresa"):
     st.success(
         "Jesenia, gracias por ser una hermana maravillosa. "
-        "Que Dios te bendiga siempre y que todos tus sueños se hagan realidad. ❤️🎂"
+        "Que Dios te bendiga siempre y que todos tus sueños se hagan realidad. ❤️"
     )
