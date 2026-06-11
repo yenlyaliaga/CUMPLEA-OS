@@ -207,7 +207,8 @@ st.markdown("""
 Gracias por ser una hermana increíble,
 por tu cariño, tu apoyo y todos los momentos compartidos. 💕
 
-Te deseo un año lleno de salud,amor, éxitos y muchas bendiciones. 🎁🎉
+Te deseo un año lleno de muchas bendiciones. 🎁🎉
+<br><br>
 ❤️ Que este nuevo año de vida esté lleno de momentos inolvidables. ❤️
 
 <br><br>
