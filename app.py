@@ -34,44 +34,49 @@ st.markdown("""
 
 .titulo{
     text-align:center;
-    color:white;
-    font-size:70px;
+    color:black;
+    font-size:clamp(2rem, 6vw, 4.5rem);
     font-weight:bold;
     margin-top:20px;
-    text-shadow: 3px 3px 15px rgba(0,0,0,0.4);
 }
 
 .subtitulo{
     text-align:center;
-    color:white;
-    font-size:28px;
+    color:black;
+    font-size:clamp(1.2rem, 3vw, 2rem);
     margin-bottom:20px;
 }
 
 .mensaje{
     text-align:center;
-    color:white;
-    font-size:24px;
+    color:black;
+    font-size:clamp(1rem, 2vw, 1.5rem);
     max-width:900px;
     margin:auto;
     line-height:1.8;
     padding:20px;
+    font-weight:500;
 }
 
 .video-container{
     display:flex;
     justify-content:center;
+    align-items:center;
     margin-top:30px;
     margin-bottom:30px;
 }
 
 .video-frame{
+    width:100%;
+    max-width:500px;
     border-radius:25px;
     overflow:hidden;
-    box-shadow:0px 0px 40px rgba(255,255,255,0.8);
+    box-shadow:0px 0px 40px rgba(255,255,255,0.9);
 }
 
-/* GLOBOS */
+/* ==========================
+   GLOBOS
+========================== */
 
 .balloon{
     position:fixed;
@@ -79,7 +84,7 @@ st.markdown("""
     width:80px;
     height:100px;
     border-radius:50%;
-    opacity:0.8;
+    opacity:0.85;
     z-index:0;
 }
 
@@ -144,6 +149,25 @@ st.markdown("""
     }
 }
 
+/* Celulares */
+
+@media (max-width: 768px){
+
+    .balloon{
+        width:50px;
+        height:65px;
+    }
+
+    .balloon:before{
+        height:60px;
+        top:65px;
+    }
+
+    .mensaje{
+        padding:15px;
+    }
+}
+
 </style>
 
 <div class="balloon b1"></div>
@@ -184,9 +208,21 @@ video_base64 = base64.b64encode(video_bytes).decode()
 st.markdown(f"""
 <div class="video-container">
     <div class="video-frame">
-        <video width="500" autoplay muted loop controls>
+
+        <video
+            autoplay
+            muted
+            loop
+            controls
+            style="
+                width:100%;
+                height:auto;
+                display:block;
+            "
+        >
             <source src="data:video/mp4;base64,{video_base64}" type="video/mp4">
         </video>
+
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -200,15 +236,18 @@ st.markdown("""
 
 🌷 Hoy es un día muy especial porque celebramos tu vida. 🌷
 
-
-
 <br><br>
 
 Gracias por ser una hermana increíble,
 por tu cariño, tu apoyo y todos los momentos compartidos. 💕
 
-Te deseo un año lleno de muchas bendiciones. 🎁🎉
 <br><br>
+
+Te deseo un año lleno de alegría,
+salud, amor y muchas bendiciones. 🎁🎉
+
+<br><br>
+
 ❤️ Que este nuevo año de vida esté lleno de momentos inolvidables. ❤️
 
 <br><br>
